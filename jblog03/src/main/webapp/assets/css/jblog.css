@@ -117,7 +117,8 @@ a:hover {
 	font-weight: bold;
 }
 
-.login-form input[type='text'] {
+.login-form input[type='text'], 
+.login-form input[type='password'] {
 	margin-bottom: 10px;
 	width: 230px;
 	padding: 5px

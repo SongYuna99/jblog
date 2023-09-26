@@ -5,7 +5,7 @@
 	version="2.5">
 	<display-name>jblog03</display-name>
 
-	<!-- Listener
+	<!-- Listener -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
@@ -14,8 +14,6 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:applicationContext.xml</param-value>
 	</context-param>
-	 -->
-
 
 	<!-- Encoding Filter -->
 	<filter>
@@ -37,7 +35,6 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 
-
 	<!-- Dispatcher Servlet -->
 	<servlet>
 		<servlet-name>spring</servlet-name>
@@ -51,7 +48,6 @@
 		<servlet-name>spring</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-
 
 	<!-- Common Error Page -->
 	<error-page>

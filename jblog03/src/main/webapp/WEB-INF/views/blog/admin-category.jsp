@@ -11,21 +11,16 @@
 </head>
 <body>
 	<div id="container">
-		<div id="header">
-			<h1>Spring 이야기</h1>
-			<ul>
-				<li><a href="">로그인</a></li>
-				<li><a href="">로그아웃</a></li>
-				<li><a href="">블로그 관리</a></li>
-			</ul>
-		</div>
+		<c:import url="/WEB-INF/views/blog/header.jsp"></c:import>
+		
 		<div id="wrapper">
 			<div id="content" class="full-screen">
 				<ul class="admin-menu">
-					<li><a href="">기본설정</a></li>
-					<li class="selected">카테고리</li>
-					<li><a href="">글작성</a></li>
+					<li><a href="${pageContext.request.contextPath}/blog/${authUserId}/admin/basic">기본설정</a></li>
+					<li class="selected"><a href="${pageContext.request.contextPath}/blog/${authUserId}/admin/category">카테고리</a></li>
+					<li><a href="${pageContext.request.contextPath}/blog/${authUserId}/admin/write">글작성</a></li>
 				</ul>
+				
 		      	<table class="admin-cat">
 		      		<tr>
 		      			<th>번호</th>
@@ -74,11 +69,8 @@
 		      	</table> 
 			</div>
 		</div>
-		<div id="footer">
-			<p>
-				<strong>Spring 이야기</strong> is powered by JBlog (c)2016
-			</p>
-		</div>
+		
+		<c:import url="/WEB-INF/views/blog/footer.jsp"></c:import>
 	</div>
 </body>
 </html>
