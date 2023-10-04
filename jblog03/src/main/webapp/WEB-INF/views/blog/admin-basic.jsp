@@ -24,19 +24,19 @@
 				<form action="" method="post">
 	 		      	<table class="admin-config">
 			      		<tr>
-			      			<td class="t">블로그 제목</td>
+			      			<th class="t">블로그 제목</th>
 			      			<td><input type="text" size="40" name="title"></td>
 			      		</tr>
 			      		<tr>
-			      			<td class="t">로고이미지</td>
+			      			<th class="t">로고이미지</th>
 			      			<td><img src="${pageContext.request.contextPath}/assets/images/spring-logo.jpg"></td>      			
 			      		</tr>      		
 			      		<tr>
-			      			<td class="t">&nbsp;</td>
+			      			<th class="t">&nbsp;</th>
 			      			<td><input type="file" name="logo-file"></td>      			
 			      		</tr>           		
 			      		<tr>
-			      			<td class="t">&nbsp;</td>
+			      			<th class="t">&nbsp;</th>
 			      			<td class="s"><input type="submit" value="기본설정 변경"></td>      			
 			      		</tr>           		
 			      	</table>

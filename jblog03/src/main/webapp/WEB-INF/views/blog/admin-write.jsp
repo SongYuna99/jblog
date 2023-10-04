@@ -24,21 +24,21 @@
 				<form action="" method="post">
 			      	<table class="admin-cat-write">
 			      		<tr>
-			      			<td class="t">제목</td>
+			      			<th class="t">제목</th>
 			      			<td>
-			      				<input type="text" size="60" name="title">
 				      			<select name="category">
 				      				<option>미분류</option>
 				      				<option>자바</option>
 				      			</select>
+				      			<input type="text" size="60" name="title">
 				      		</td>
 			      		</tr>
 			      		<tr>
-			      			<td class="t">내용</td>
+			      			<th class="t">내용</th>
 			      			<td><textarea name="content"></textarea></td>
 			      		</tr>
 			      		<tr>
-			      			<td>&nbsp;</td>
+			      			<th>&nbsp;</th>
 			      			<td class="s"><input type="submit" value="포스트하기"></td>
 			      		</tr>
 			      	</table>

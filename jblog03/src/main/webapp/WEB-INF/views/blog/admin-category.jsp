@@ -55,18 +55,15 @@
       			<h4 class="n-c">새로운 카테고리 추가</h4>
 		      	<table id="admin-cat-add">
 		      		<tr>
-		      			<td class="t">카테고리명</td>
+		      			<th class="t">카테고리명</th>
 		      			<td><input type="text" name="name"></td>
 		      		</tr>
 		      		<tr>
-		      			<td class="t">설명</td>
+		      			<th class="t">설명</th>
 		      			<td><input type="text" name="desc"></td>
 		      		</tr>
-		      		<tr>
-		      			<td class="s">&nbsp;</td>
-		      			<td><input type="submit" value="카테고리 추가"></td>
-		      		</tr>      		      		
 		      	</table> 
+      			<input type="submit" id="admin-cat-add-btn" value="카테고리 추가">  		      		
 			</div>
 		</div>
 		

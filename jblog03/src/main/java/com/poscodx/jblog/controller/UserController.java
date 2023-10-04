@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.poscodx.jblog.service.BlogService;
 import com.poscodx.jblog.service.UserService;
 import com.poscodx.jblog.vo.UserVo;
 
@@ -14,25 +15,14 @@ import com.poscodx.jblog.vo.UserVo;
 public class UserController {
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private BlogService blogService;
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login() {
 		return "user/login";
 	}
-//
-//	@RequestMapping(value = "/login", method = RequestMethod.POST)
-//	public String login2(UserVo userVo, Model model) {
-//		String id = userService.login(userVo);
-//		
-//		if(id == null) {
-//			id=userVo.getId();
-//			model.addAttribute("id", id);
-//			return "user/login";
-//		}
-//
-//		model.addAttribute("id", id);
-//		return "main/index";
-//	}
 
 	@RequestMapping(value = "/join", method = RequestMethod.GET)
 	public String join() {
@@ -41,13 +31,10 @@ public class UserController {
 
 	@RequestMapping(value = "/join", method = RequestMethod.POST)
 	public String join2(UserVo userVo) {
-		userService.join(userVo);
+		if(userService.join(userVo)) {
+			blogService.insert(userVo.getId());			
+		}
 		
 		return "user/joinsuccess";
-	}
-
-	@RequestMapping(value = "/logout", method = RequestMethod.GET)
-	public String logout() {
-		return "main/index";
 	}
 }

@@ -4,19 +4,18 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.poscodx.jblog.vo.UserVo;
+import com.poscodx.jblog.vo.BlogVo;
 
 @Repository
-public class UserRepository {
+public class BlogRepository {
 	@Autowired
 	private SqlSession sqlSession;
 
-	public String login(UserVo userVo) {
-		return sqlSession.selectOne("user.login", userVo);
+	public void insert(String id) {
+		sqlSession.insert("blog.insert", id);
 	}
 
-	public boolean join(UserVo userVo) {
-		return sqlSession.insert("user.join", userVo) == 1;
+	public BlogVo findById(String authUserId) {
+		return sqlSession.selectOne("blog.findById", authUserId);
 	}
-
 }

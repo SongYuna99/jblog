@@ -15,8 +15,8 @@ public class UserService {
 		return userRepository.login(userVo);
 	}
 
-	public void join(UserVo userVo) {
-		userRepository.join(userVo);
+	public boolean join(UserVo userVo) {
+		return userRepository.join(userVo);
 	}
 
 }

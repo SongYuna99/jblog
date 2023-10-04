@@ -5,7 +5,7 @@
 	<insert id="join" parameterType="uservo">
 		<![CDATA[
 			insert into user(id, name, password)
-			values(#{id}, #{name}, password(#{password}));
+			values(#{id}, #{name}, password(#{password}))
 		]]>
 	</insert>
 

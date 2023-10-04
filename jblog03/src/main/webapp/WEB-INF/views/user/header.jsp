@@ -4,7 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<h1 class="logo">JBlog</h1>
+<a href="${pageContext.request.contextPath}/"><h1 class="logo">JBlog</h1></a>
 <ul class="menu">
 	<c:choose>
 		<c:when test="${ empty authUserId }">
