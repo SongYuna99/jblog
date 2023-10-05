@@ -25,11 +25,11 @@
 	 		      	<table class="admin-config">
 			      		<tr>
 			      			<th class="t">블로그 제목</th>
-			      			<td><input type="text" size="40" name="title"></td>
+			      			<td><input type="text" size="40" name="title" value="${ blogVo.title }"></td>
 			      		</tr>
 			      		<tr>
 			      			<th class="t">로고이미지</th>
-			      			<td><img src="${pageContext.request.contextPath}/assets/images/spring-logo.jpg"></td>      			
+			      			<td><img src="${pageContext.request.contextPath}${ blogVo.image }"></td>      			
 			      		</tr>      		
 			      		<tr>
 			      			<th class="t">&nbsp;</th>
