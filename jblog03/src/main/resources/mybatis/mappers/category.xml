@@ -8,7 +8,7 @@
 			values(#{id})
 		]]>
 	</insert>
-	
+
 	<select id="findByBlogId" parameterType="String" resultType="categoryvo">
 		<![CDATA[
 			select no, name, description 
@@ -17,5 +17,19 @@
 			order by no asc
 		]]>
 	</select>
+
+	<insert id="insertNewCategory" parameterType="categoryvo">
+		<![CDATA[
+			insert into category(blog_id, name, description)
+			values(#{ blogId }, #{ name }, #{ description })
+		]]>
+	</insert>
+	
+	<delete id="deleteByNo" parameterType="Long">
+		<![CDATA[
+			delete from category
+			where no = #{no}
+		]]>
+	</delete>
 
 </mapper>

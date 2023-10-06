@@ -18,4 +18,8 @@ public class BlogRepository {
 	public BlogVo findById(String authUserId) {
 		return sqlSession.selectOne("blog.findById", authUserId);
 	}
+
+	public void update(BlogVo blogVo) {
+		sqlSession.update("blog.update", blogVo);
+	}
 }

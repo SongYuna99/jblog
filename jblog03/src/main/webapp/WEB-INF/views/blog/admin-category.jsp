@@ -35,23 +35,27 @@
 							<td>${ vo.name }</td>
 							<td>0</td>
 							<td>${ vo.description }</td>
-							<td><img src="${pageContext.request.contextPath}/assets/images/delete.jpg"></td>
+							<td><a href="${pageContext.request.contextPath}/blog/${authUserId}/admin/category/delete/${vo.no}">
+								<img src="${pageContext.request.contextPath}/assets/images/delete.jpg">
+							</a></td>
 						</tr> 
 		      		</c:forEach>  
 				</table>
       	
       			<h4 class="n-c">새로운 카테고리 추가</h4>
-		      	<table id="admin-cat-add">
-		      		<tr>
-		      			<th class="t">카테고리명</th>
-		      			<td><input type="text" name="name"></td>
-		      		</tr>
-		      		<tr>
-		      			<th class="t">설명</th>
-		      			<td><input type="text" name="desc"></td>
-		      		</tr>
-		      	</table> 
-      			<input type="submit" id="admin-cat-add-btn" value="카테고리 추가">  		      		
+      			<form name="cat-add" action="${pageContext.request.contextPath}/blog/${authUserId}/admin/category/add" method="post">	
+			      	<table id="admin-cat-add">
+			      		<tr>
+			      			<th class="t">카테고리명</th>
+			      			<td><input type="text" name="name"></td>
+			      		</tr>
+			      		<tr>
+			      			<th class="t">설명</th>
+			      			<td><input type="text" name="description"></td>
+			      		</tr>
+			      	</table> 
+	      			<input type="submit" id="admin-cat-add-btn" value="카테고리 추가">  		      		
+      			</form>
 			</div>
 		</div>
 		

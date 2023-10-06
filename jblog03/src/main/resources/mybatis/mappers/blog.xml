@@ -16,5 +16,13 @@
 			where blog_id = #{authUserId}
 		]]>
 	</select>
+	
+	<update id="update" parameterType="blogvo">
+		<![CDATA[
+			update blog
+			set title = #{title}, image = #{image}
+			where blog_id = #{blogId}
+		]]>
+	</update>
 
 </mapper>

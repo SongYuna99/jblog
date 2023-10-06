@@ -21,4 +21,12 @@ public class CategoryService {
 		return categoryRepository.findByBlogId(blogId);
 	}
 
+	public boolean insertNewCategory(CategoryVo categoryVo) {
+		return categoryRepository.insertNewCategory(categoryVo);
+	}
+
+	public boolean deleteByNo(Long no) {
+		return categoryRepository.deleteByNo(no);
+	}
+
 }

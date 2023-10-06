@@ -21,7 +21,7 @@
 					<li><a href="${pageContext.request.contextPath}/blog/${authUserId}/admin/write">글작성</a></li>
 				</ul>
 				
-				<form action="" method="post">
+				<form action="${pageContext.request.contextPath}/blog/${authUserId}/admin/basic/update" method="post" enctype="multipart/form-data">
 	 		      	<table class="admin-config">
 			      		<tr>
 			      			<th class="t">블로그 제목</th>

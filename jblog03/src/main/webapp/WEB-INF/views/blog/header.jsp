@@ -4,7 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <div id="header">
-	<a href="${pageContext.request.contextPath}/blog/${authUserId}"><h1>Spring 이야기</h1></a>
+	<a href="${pageContext.request.contextPath}/blog/${authUserId}"><h1>${ blogVo.title }</h1></a>
 	<ul>
 		<c:choose>
 			<c:when test="${ empty authUserId }">

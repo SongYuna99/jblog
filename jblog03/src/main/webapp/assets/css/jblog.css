@@ -516,7 +516,7 @@ div#content .admin-cat {
 	font-weight: bold;
 }
 
-select[name='category'] {
+select[name='categoryNo'] {
 	padding: 7px 20px;
 	margin: 0px 0px 0px 10px;
 	

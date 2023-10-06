@@ -18,4 +18,8 @@ public class BlogService {
 	public BlogVo findById(String authUserId) {
 		return blogRepository.findById(authUserId);
 	}
+
+	public void Update(BlogVo blogVo) {
+		blogRepository.update(blogVo);
+	}
 }

@@ -19,6 +19,14 @@ public class CategoryRepository {
 
 	public List<CategoryVo> findByBlogId(String blogId) {
 		return sqlSession.selectList("category.findByBlogId", blogId);
-	}	
-	
+	}
+
+	public boolean insertNewCategory(CategoryVo categoryVo) {
+		return sqlSession.insert("category.insertNewCategory", categoryVo) == 1;
+	}
+
+	public boolean deleteByNo(Long no) {
+		return sqlSession.delete("category.deleteByNo", no) == 1;
+	}
+
 }
